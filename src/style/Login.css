@@ -1,0 +1,40 @@
+#robot, #image, #image2, #image3 {
+    user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 280px 296px auto;
+    grid-template-rows: auto 70px 56px 70px 32px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    position: absolute;
+    align-items: end;
+    z-index: 1000;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+}
+    
+.robot { grid-area: 2 / 1 / 6 / 2; }
+.robot-chatbox1 { grid-area: 2 / 2 / 3 / 3; }
+.robot-chatbox2 { grid-area: 3 / 2 / 4 / 3; }
+.self-chatbox1 { grid-area: 4 / 3 / 5 / 4; }
+
+.self.popover {
+    background-color: #e6e6e6;
+}
+.self.bs-popover-start > .popover-arrow::after {
+    border-left-color: #e6e6e6;
+}
+
+.popover-body {
+    padding: 0.5rem 0.9rem;
+}
+.self .popover-body {
+    padding: 0.4rem 0.8rem;
+}

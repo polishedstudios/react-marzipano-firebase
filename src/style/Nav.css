@@ -1,0 +1,51 @@
+.router {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  padding-block: 5px;
+}
+
+.vertical-bar {
+  background-color: #dbdbdb;
+  width: 1px;
+  height: 55px;
+  margin: 1px 34px;
+}
+
+.title {
+  font-size: 1.35rem;
+}
+
+.nav-link {
+  font-size: 1.135rem;
+}
+
+.nav-profile {
+  margin-right: 20px;
+}
+
+@media (max-width: 780px) {
+  .vertical-bar, .title {
+    display: none;
+  }
+}
+@media (max-width: 300px) { /* Samsung Fold support */
+  .logo {
+    height: 45px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: 1620px;
+  }
+}

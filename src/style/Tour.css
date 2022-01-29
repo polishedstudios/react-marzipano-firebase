@@ -1,0 +1,291 @@
+.notifications {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+}
+
+.hotspot {
+  cursor: pointer;
+}
+
+.hotspot .out:before {
+  speak: none;
+  font-size: 48px;
+  line-height: 90px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hotspot .out {
+  margin: 2px 0 0 2px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, .8);
+  -webkit-transition: -webkit-transform ease-out 0.1s, border 0.2s;
+  -moz-transition: -moz-transform ease-out 0.1s, border 0.2s;
+  transition: transform ease-out 0.1s, border 0.2s;
+}
+
+.hotspot .in {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+  -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+  transition: transform ease-out 0.1s, background 0.2s;
+}
+
+.hotspot .in img {
+  vertical-align: top;
+}
+
+.hotspot .out:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: -1;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.hotspot:hover .out {
+  border: 5px solid rgba(255, 255, 255, 1);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  color: #fff;
+}
+
+.hotspot:hover .in {
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.hotspot:hover .out:after {
+  -webkit-animation: sonarEffect 1.2s ease-out;
+  -moz-animation: sonarEffect 1.2s ease-out;
+  animation: sonarEffect 1.2s ease-out;
+}
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px rgba(160, 42, 228, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px rgba(160, 42, 228, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes sonarEffect {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px rgba(160, 42, 228, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px rgba(160, 42, 228, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.5);
+    -moz-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px rgba(160, 42, 228, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px rgba(160, 42, 228, 0.8), 0 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.hotspot .hotspot-icon {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
+
+
+/* tooltip */
+
+.hotspot-tooltip {
+  position: relative;
+  display: inline-block;
+} 
+
+.hotspot-tooltip .hotspot-tooltiptext {
+  visibility: hidden;
+  width: 90px;
+  background-color: rgb(14, 14, 14);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 4px;
+  position: absolute;
+  z-index: 100;
+  bottom: 118%;
+  left: 80%;
+  margin-left: -56px;
+  font-size: 13px;
+  opacity: .85;
+}
+
+.hotspot-tooltip .hotspot-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  opacity: .85;
+}
+
+.hotspot-tooltip:hover .hotspot-tooltiptext {
+  visibility: visible;
+}
+
+
+/* info-box tip */
+
+.tip {
+  position: absolute;
+  top: 55px;
+  left: -185px;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: rotateZ(5deg) rotateY(40deg);
+  -webkit-transform: rotateZ(5deg) rotateY(40deg);
+  transform-origin: center;
+  -webkit-transform-origin: center;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+}
+
+.tip.sm {
+  left: -118px;
+  width: 280px;
+}
+
+.tip-active .tip {
+  opacity: .98;
+  transform: none;
+  -webkit-transform: none;
+  font-size: 0;
+}
+
+.tip .tip-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: .6rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+.tip .tip-header h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1px;
+}
+
+.tip .tip-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: .6rem 1rem;
+}
+.tip .tip-body .info-box {
+  margin-bottom: 0.5rem;
+}
+.tip .tip-body .info-box:last-child {
+  margin-bottom: 2px;
+}
+.tip .tip-body .info-box p {
+  font-size: .85rem;
+  margin: 0;
+}
+.tip .tip-body .info-box i {
+  vertical-align: middle;
+  width: 78%;
+  display: inline-block;
+}
+.tip .tip-body .info-box .one-link {
+  margin-left: 6px;
+  width: 27px;
+  display: inline-block;
+}
+.tip .tip-body .info-box .image {
+  width: 100%;
+}
+.tip .tip-body .info-box.centered {
+  text-align: center;
+}
+.tip .tip-body i {
+  font-size: .7rem;
+  opacity: .8;
+}
+/* .tip .tip-body a {
+  color: #ae5ec7;
+  text-decoration: underline;
+}
+.tip .tip-body strong.heading {
+  font-size: .88rem;
+  color: #6704a4;
+} */
+.tip-active .tip .tip-body .info-box img, .tip-active .tip .tip-body .info-box a, .tip-active .tip .tip-body .info-box.is-active {
+  pointer-events: auto;
+}
+
+.btn-primary:not(:disabled) {
+  color: white;
+}

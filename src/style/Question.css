@@ -1,0 +1,49 @@
+.btn.btn-primary[disabled] {
+  border-color: #96968c;
+  background-color: #96968c;
+}
+
+.form-check-input:checked {
+  background-color: #a956c2;
+  border-color: #a956c2;
+}
+
+.spinner-border-sm {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.35em;
+}
+
+.alert {
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+
+.alert-danger {
+  color: #41464b;
+  background-color: #e2e3e5;
+  border-color: #d3d6d8;
+}
+
+.form-check-input.correct[disabled]~.form-check-label {
+  opacity: 1 !important;
+  color: #a956c2;
+}
+
+.form-check-input.correct:checked {
+  opacity: 1 !important;
+}
+
+.form-check-input.incorrect[disabled]~.form-check-label {
+  text-decoration: line-through;
+}
+
+.form-check-input.incorrect:checked {
+  background-color: #000;
+  border-color: #000;
+}
+
+.icon {
+  width: 28px;
+}

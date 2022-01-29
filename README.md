@@ -6,6 +6,15 @@ This web application is an interactive, gamified virtual tour made with `Node.js
 
 > The general idea is for user to be curious and interact with various interactions, so that they learn information about different topics, and can answer questions with this new knowledge. The user has the freedom to view and switch between any interaction at any time they want. By doing certain actions the user can unlock new interactions and rooms.
 
+### Deployed on https://polishedstudios-virtualtour.herokuapp.com/
+<i>Please wait a moment after clicking the link. The app may take up to 1 minute to startup from sleep mode.</i>
+
+## About the virtual tour
+
+![Virtual Tour Screenshot](https://i.imgur.com/pC1JoOz.png)
+
+<br>
+
 The user can `interact` with different types of `spots` throughout the room, these are:
 
 - Link spots (navigate between rooms).

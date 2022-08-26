@@ -1,13 +1,13 @@
 # Interactive Virtual Tour  [scrubbed version]
 
-### Internal internship project for Accenture (Heerlen, NL) by Polished Studios (@polishedstudios).
+### Internal internship project for Accenture (Heerlen, NL) by Polished Studios (@polishedstudios) 2022-2023.
 
 This web application is an interactive, gamified virtual tour made with `Node.js`, `React` and `Marzipano`. It was made to be used as an educational tool within Accenture. 
 
 > The general idea is for user to be curious and interact with various interactions, so that they learn information about different topics, and can answer questions with this new knowledge. The user has the freedom to view and switch between any interaction at any time they want. By doing certain actions the user can unlock new interactions and rooms.
 
-### Deployed on https://polishedstudios-virtualtour.herokuapp.com/
-<i>Please wait a moment after clicking the link. The app may take up to 1 minute to start up from sleep mode.</i>
+### ~~Deployed on https://polishedstudios-virtualtour.herokuapp.com/~~
+<i>The app has been suspended and is no longer online due to Heroku's withdrawel of free services starting November 28th 2023.</i>
 
 ## About the virtual tour
 
